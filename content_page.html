@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Page</title>
+<style>
+html{
+        background-image: url("content_page.jpeg");
+        overflow: hidden;
+        background-size:cover;
+        background-repeat: no-repeat;
+}
+.button{
+    height:100px;
+    width: 300px;
+    margin-left: 805px;
+    margin-top: 600px;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    font-size: 30px;
+}
+.button2{
+    border-radius: 10px;
+    font-size: 25px;
+    background-color:green;
+    height:50px;width:100px;
+    margin-left: 915px;
+    margin-top:20px ;
+
+}
+</style>
+</head>
+
+
+
+<body>
+    <h1 style="text-align: center;color: wheat;">Welcome to the Metawerse!</h1>
+    <p style="text-align: center;font-size: 25px;color: wheat;">The metaverse is a digital reality that combines aspects of social media, online gaming, augmented reality (AR), virtual reality (VR), and cryptocurrencies 
+        to allow users to interact virtually.<br> Augmented reality overlays visual elements, sound, and other sensory input onto real-world settings to enhance the user experience. 
+        In contrast, virtual reality is entirely virtual and enhances fictional realities. </p>
+    
+    <button class="button" onclick="myfunction()">Connect the Metaverse</button>
+    <button class="button2" onclick="returnfunction()">Exit</button>
+</body>
+<script>
+    function myfunction(){
+        alert("Coming soon...");
+    }
+    function returnfunction(){
+        window.location.assign("login_page.html");
+    }
+</script>
+</html>

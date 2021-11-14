@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+    html{
+        background-image: url("backgroung_image.png");
+        overflow: hidden;
+        
+        
+  background-size:contain;
+  background-repeat: no-repeat;
+  
+    }
+    body div{
+        text-align: center;
+        margin: 1px;
+        padding: 1px; 
+        font-size: 50px;
+        color: ivory;
+    }
+    body form {
+    text-align: center;
+    align-items: center;
+    min-height:100vh;
+    font-size: 8px;
+    margin: 10px;
+    padding: 20px;    
+    
+    }
+    body form div{
+        text-align:center;
+        font-size: 13px;
+        padding: auto;
+        margin: 400px;
+        display:inline-flex;
+        flex-direction:column;
+        border-radius: 3px;
+        width:450px;
+        height:198px;
+         
+        opacity: 0.85;
+        
+    
+
+    }
+    body form div label{
+        text-align: left;
+        margin: 5px;
+
+    
+    }
+    .input1{
+        color: khaki;
+        height: 100px; 
+        font-size: 25px; 
+        border-radius: 50px;
+        background-color: rgb(56, 35, 65);
+    }
+    .input2{
+        background-color:green;
+        border-radius: 10px;
+        border:0px;
+        height:100px;
+        width:300px; 
+        margin-left: 75px; 
+        font-size: 27px;
+    }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Metaverse</h1>
+        
+        
+    </div>
+   
+    <form onsubmit="return false">
+        <div > 
+        <input type="text" id="user_id"  class="input1"value=""placeholder="Meta ID"><br>
+        <input type="password" id="password" class="input1"  value=""placeholder="Password"><br>
+        
+        <input class="input2" type="submit" name="" value="Sign In" onclick="check_input()">
+       
+   </div>
+    </form>
+     
+    <script>
+        function check_input(){
+        var user_name=document.getElementById('user_id').value;
+        var password=document.getElementById('password').value;
+        var special_chars= /[!@#$%^&*()_+\-=\[\]{};1234567890':"\\|,.<>\/?]+/;  //for controlling special characters
+        var recorded_usernames=["batuhan","kaan","lebron","elon"];   // recorded user-names
+        var recorded_passwords=["a1/","b2*","c3-","d4+"];            // recorded passwords
+        for(var i=0; i<=recorded_usernames.length;i++){              // controls the input values if they matched with recorded data or not
+
+         if(user_name==recorded_usernames[i]&&password==recorded_passwords[i]&&special_chars.test(password)==true){ //if they are matched the user can access other site
+            window.location.assign("content_page.html");
+            break;
+    }
+        else if(i==recorded_usernames.length){       // if they dont matched it warn the user 
+            alert("wrong username or password!!")
+            break; 
+            
+        }
+
+}
+       
+           
+        }
+    </script>
+</body>
+</html>
